@@ -8,8 +8,17 @@ pipeline {
       }
     }
     stage('Release') {
-      steps {
-        bat 'echo "Its now ready to release"'
+      parallel {
+        stage('Release') {
+          steps {
+            bat 'echo "Its now ready to release"'
+          }
+        }
+        stage('Build Now') {
+          steps {
+            build 'clean package'
+          }
+        }
       }
     }
   }
