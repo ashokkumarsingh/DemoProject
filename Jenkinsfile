@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'echo "First Step initialzed"'
+        bat 'mvn clean package'
       }
     }
     stage('Test') {
