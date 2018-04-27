@@ -11,9 +11,9 @@ pipeline {
         bat 'echo "Testing is being here"'
       }
     }
-    stage('deploy') {
+    stage('deploye') {
       steps {
-        mail(subject: 'Test', body: 'Hello', bcc: '1975deepak@gmail.com', cc: '1975deepak@gmail.com', from: 'ashokkumarsingh.jilit@gmail.com', to: '1975deepak@gmail.com')
+        bat 'echo "Deploy"'
       }
     }
   }
